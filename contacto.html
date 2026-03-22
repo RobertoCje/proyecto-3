@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Gutenberg Maran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="logo.png" alt="Instituto Gutenberg Maran Logo">
+            <h1>Instituto Gutenberg Maran </h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class ="contenedor-contacto">
+        <h2>Escribenos</h2>
+        <p>Dejanos tus datos nosotros nos pondremos en contacto contigo.</p>
+
+        <from action="#" method="post" class="form-conteiner">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Perez" required>
+        </div>
+            <div class="form-group">
+                <label for="email">Correo Electronico</label>
+                <input type="email" id="email" name="email" placeholder="Ej. juan@ejemplo.com" required>
+        </div>
+            <div class="form-group">
+                <label for="numero">Numero de Telefono</label>
+                <input type="tel" id="numero" name="numero" placeholder="Ej. +52 492 922 1836" required>
+                </div>
+            <div class="form-group">
+                <label for="nivel">Nivel de Interes</label>
+                <select name="nivel" id="nivel">
+                    <option value="preescolvar">Preescolar</option>
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                </select>
+            </div>   
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div> 
+                <button type="submit" class="btn-primary">Enviar</button>
+        </from>
+        <p><strong>Direccion:</strong> Zacatlan, 98057 Zacatecas</p>
+        <p><strong>Email:</strong> info@institutogutenbergmaran.edu.mx</p>
+        <p><strong>Telefono:</strong> +52 492 922 1836</p>  
+       <div class="redes-sociales">
+            <a href="https://www.facebook.com/IGutenbergMaran/" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/igutenbergmaran/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+       </div>     
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.8438826696392!2d-102.60944452469369!3d22.77117427935083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86824f8275c14749%3A0x36287ac5f4063b41!2sInstituto%20Gutenberg%20Maran!5e0!3m2!1ses!2smx!4v1773953307249!5m2!1ses!2smx" 
+            width="600" height="450" style="border:0;" allowfullscreen="" 
+            loading="lazy"></iframe>
+        </div>   
+             <a href="index.html" ><button class="btn-primary">Volver al Inicio</button></a>
+</body>
