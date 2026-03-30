@@ -1,0 +1,478 @@
+/* =========================================
+   ESTILOS GENERALES Y RESEO (Base Gris Claro)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Usando la fuente profesional de Google */
+}
+
+body {
+    background-color: #f4f4f4; /* Gris muy claro para el fondo */
+    color: #333; /* Gris oscuro para el texto principal (más legible que negro puro) */
+    line-height: 1.6;
+}
+
+/* Enlaces globales */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+/* Aplicamos el fondo a TODAS las páginas que usen este CSS */
+body {
+    margin: 0;
+    padding: 0;
+    /* 1. Ponemos la imagen con una capa oscura (0.6) para que el texto blanco se lea perfecto */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('fondo.jpg'); /* <--- Asegúrate que el nombre sea igual al de tu archivo */
+    
+    background-size: cover;       /* Estira la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la foto de la fachada */
+    background-attachment: fixed; /* Efecto Parallax: la foto no se mueve al bajar */
+    min-height: 100vh;            /* Altura mínima de toda la ventana */
+    color: white;                 /* Texto principal en blanco */
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* IMPORTANTE: Si en index.html tienes un background en #hero, 
+   debes quitarlo o ponerlo transparente para que se vea el del body */
+#hero {
+    background: transparent !important;
+    height: 80vh; /* Ajusta la altura que quieras para tu portada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ajuste para que las tarjetas de servicios sigan siendo legibles */
+.service-card, .contenedor-contacto {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    color: #333 !important; /* Texto oscuro dentro de las cajas blancas */
+}
+/* =========================================
+   HEADER (Navegación Profesional)
+   ========================================= */
+header {
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    padding: 1.5 rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Sombra sutil profesional */
+    border-bottom: 2px solid #FF9800;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    align-items: center;
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #388e3c; /* VERDE INSTITUCIONAL: Limpio y educativo */
+}
+.logo img{
+    height: 150px;
+    margin-right: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #424242;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #ef6c00; /* NARANJA INSTITUCIONAL en hover: Llamativo */
+}
+
+/* =========================================
+   SECCIÓN HERO (Degradado Animado Llamativo)
+   ========================================= */
+main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#hero {
+    position: relative;
+    height: 80vh; /* Altura del 80% de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    /* Configuración de la imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax opcional */
+}
+
+.hero-content {
+    z-index: 2;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    /* Usamos el naranja institucional para resaltar palabras clave si quieres */
+    color: #ffffff; 
+}
+
+#hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+/* BOTÓN PRIMARIO (Naranja Profundo Profesional) */
+.btn-primary {
+    background-color: #EF6C00; /* Naranja quemado profesional */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px; /* Bordes redondeados modernos */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background-color: #FF9800; /* Naranja brillante en hover */
+    transform: translateY(-3px); /* Pequeño salto en hover */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* Estilos específicos para la Galería */
+#galeria {
+    padding: 120px 20px 60px; /* Espacio para el header fijo */
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e0f2f1 100%);
+}
+
+#galeria h2 {
+    color: #388E3C;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Esto evita que las fotos se estiren feo */
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-container img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.back-link {
+    margin-top: 50px;
+}
+
+/* --- Contenedor Global --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px; /* Margen de seguridad a los lados */
+}
+
+/* --- Sección Principal --- */
+#nosotros-premium {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fffcf5 0%, #ffffff 100%); /* Degradado sugerido */
+}
+
+.nosotros-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: #FF9800; /* Naranja institucional */
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 80px; /* Espacio antes de las tarjetas */
+    color: #444;
+}
+
+/* --- Grilla con Espaciado (Gap) --- */
+.cards-grid {
+    display: flex;
+    gap: 40px; /* SEPARA las tarjetas entre sí */
+    justify-content: center;
+    flex-wrap: wrap; /* Para móviles */
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 40px; /* Aire interno de la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+    color: #388E3C; /* Verde institucional */
+}
+
+/* --- Botón --- */
+.action-area {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #FF9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    position: relative;
+    height: 0;
+}
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+/* Contenedor del formulario */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+/* Contenedor principal del formulario */
+.contenedor-contacto {
+    max-width:600px;          /* Ancho reducido para que se vea compacto */
+    margin: 50px auto;         /* Centra el formulario y da espacio arriba/abajo */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra elegante */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-contacto h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contenedor-contacto p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+/* Espaciado de cada grupo de etiqueta/input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* Estilo de los inputs, select y textarea */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box; /* Muy importante para que no se desborde */
+    transition: border-color 0.3s ease;
+}
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff7f00; /* Color naranja al hacer clic */
+}
+/* Contenedor general */
+.servicios-seccion {
+    padding: 60px 20px;
+    background-color: #f4f7f6; /* Un gris muy claro de fondo */
+}
+
+/* Grid que organiza las tarjetas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de la tarjeta */
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid #006400; /* Verde institucional abajo */
+}
+
+/* Efecto hover */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Cabecera de la tarjeta con tu naranja */
+.card-header {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h3 {
+    margin: 0;
+    color: #006400;
+    font-size: 1.4rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #ff7f00; /* Naranja para los lemas */
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-body p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Lista interna */
+.lista-detalles {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.lista-detalles li {
+    padding: 5px 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Clase especial para destacar Secundaria y Prepa si quieres */
+.service-card.highlight {
+    border-bottom-color: #ff7f00;
+}
+
+/* =========================================
+   FOOTER (Gris Oscuro Institucional)
+   ========================================= */
+footer {
+    background-color: #424242; /* Gris oscuro para el fondo */
+    color: #e0e0e0; /* Gris muy claro para el texto */
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* =========================================
+   ANIMACIONES (El toque dinámico)
+   ========================================= */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
